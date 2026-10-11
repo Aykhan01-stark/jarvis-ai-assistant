@@ -1,6 +1,5 @@
 google-genai
 streamlit
 gTTS
-speech_recognition
 Pillow
 duckduckgo-search
