@@ -85,7 +85,7 @@ if mode == "Söhbət & Kodlaşdırma":
 
         with st.chat_message("assistant"):
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3.6-flash",
                 contents=prompt
             )
             reply = response.text
@@ -106,7 +106,7 @@ elif mode == "Şəkil Analizi (Multimodal)":
 
         with st.spinner("Şəkil analiz edilir..."):
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3.6-flash",
                 contents=[image, image_prompt]
             )
             st.markdown("### Jarvis-in Analizi:")
@@ -125,7 +125,7 @@ elif mode == "Veb Axtarış":
             prompt = f"Aşağıdakı veb axtarış nəticələrinə əsasən sualı cavablandır:\n\nSual: {search_query}\n\nMəlumatlar:\n{web_data}"
             
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3.6-flash",
                 contents=prompt
             )
             
